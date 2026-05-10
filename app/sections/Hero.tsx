@@ -92,7 +92,7 @@ export default function Hero() {
                 src="/images/profile.png"
                 alt="Putera Buana Gani"
                 fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="object-cover transition-all duration-700"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
