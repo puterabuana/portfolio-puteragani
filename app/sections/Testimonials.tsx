@@ -28,9 +28,9 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative px-6 md:px-12 py-32 md:py-48 overflow-hidden">
+    <section className="relative px-6 md:px-12 py-24 md:py-32 overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-12 gap-4 md:gap-8 mb-20">
+        <div className="grid grid-cols-12 gap-4 md:gap-8 mb-14 md:mb-16">
           <Reveal className="col-span-12 md:col-span-3">
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-muted mb-3">
               — 06 / Voices

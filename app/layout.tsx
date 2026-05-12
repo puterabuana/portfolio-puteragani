@@ -21,9 +21,6 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  icons: {
-    icon: '/favicon.png',
-  },
   title: 'Putera Buana Gani — Digital Marketing Specialist & Designer',
   description:
     'Premium freelance Digital Marketing Specialist, Graphic Designer, and Data Entry Professional. Building brands that perform.',

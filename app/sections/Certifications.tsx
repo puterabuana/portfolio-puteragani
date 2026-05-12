@@ -25,10 +25,69 @@ const MicrosoftLogo = () => (
 
 const UnileverLogo = () => (
   <div className="flex items-center gap-2">
-    <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 5 C 28 5, 10 23, 10 50 C 10 77, 28 95, 50 95 C 72 95, 90 77, 90 50 C 90 23, 72 5, 50 5 Z M 30 50 C 30 64, 40 74, 50 74 C 60 74, 70 66, 72 56 C 64 60, 56 60, 48 56 C 56 56, 60 50, 60 44 C 56 50, 48 52, 40 50 C 36 50, 33 50, 30 50 Z" fill="#1f36c7" />
+    {/* Unilever "U" logo — inspired by Wolff Olins 2004 design with iconographic cutouts */}
+    <svg width="34" height="36" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" aria-label="Unilever">
+      <defs>
+        <mask id="unilever-mask">
+          <rect width="200" height="220" fill="white" />
+          {/* Cutout icons (black = removed) */}
+          <g fill="black">
+            {/* Sun */}
+            <circle cx="38" cy="40" r="5" />
+            <g stroke="black" strokeWidth="1.8" strokeLinecap="round">
+              <line x1="38" y1="28" x2="38" y2="31" />
+              <line x1="38" y1="49" x2="38" y2="52" />
+              <line x1="26" y1="40" x2="29" y2="40" />
+              <line x1="47" y1="40" x2="50" y2="40" />
+              <line x1="30" y1="32" x2="32" y2="34" />
+              <line x1="44" y1="46" x2="46" y2="48" />
+              <line x1="30" y1="48" x2="32" y2="46" />
+              <line x1="44" y1="34" x2="46" y2="32" />
+            </g>
+            {/* Heart */}
+            <path d="M162,32 C155,25 145,32 162,48 C179,32 169,25 162,32 Z" />
+            {/* Leaf */}
+            <path d="M30,80 Q22,73 28,65 Q40,60 50,70 Q52,80 42,87 Q34,87 30,80 Z" />
+            {/* DNA wave */}
+            <path d="M147,72 Q152,77 157,72 Q162,67 167,72" stroke="black" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M147,82 Q152,77 157,82 Q162,87 167,82" stroke="black" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            {/* Flower */}
+            <g transform="translate(38,138)">
+              <circle r="3" />
+              <circle cx="-5" cy="-4" r="3" />
+              <circle cx="5" cy="-4" r="3" />
+              <circle cx="-5" cy="4" r="3" />
+              <circle cx="5" cy="4" r="3" />
+            </g>
+            {/* Spoon */}
+            <g transform="translate(75,140)">
+              <ellipse cy="-3" rx="4" ry="5.5" />
+              <rect x="-1.5" y="1.5" width="3" height="9" />
+            </g>
+            {/* Fish */}
+            <g transform="translate(110,140)">
+              <path d="M-8,0 Q-3,-5 5,-3 Q9,0 5,3 Q-3,5 -8,0 Z M-8,0 L-12,-3 L-12,3 Z" />
+            </g>
+            {/* Drop */}
+            <g transform="translate(140,140)">
+              <path d="M0,-8 Q-5,-1 -3,4 Q0,6 3,4 Q5,-1 0,-8 Z" />
+            </g>
+            {/* Hand */}
+            <g transform="translate(162,140)">
+              <path d="M-5,3 L-5,-4 Q-5,-6 -3,-6 L-3,-2 L-1.5,-2 L-1.5,-8 Q-1.5,-9 0,-9 Q1.5,-9 1.5,-8 L1.5,-2 L3,-2 L3,-7 Q3,-8 4.5,-8 Q6,-8 6,-7 L6,-2 L7,-2 L7,-5 Q7,-6 8,-6 Q9,-6 9,-5 L9,4 Q9,9 4,9 L1,9 Q-5,9 -5,3 Z" />
+            </g>
+          </g>
+        </mask>
+      </defs>
+
+      {/* The blue U shape with icons masked out */}
+      <path
+        d="M20,10 L20,120 Q20,200 100,200 Q180,200 180,120 L180,10 L150,10 L150,120 Q150,170 100,170 Q50,170 50,120 L50,10 Z"
+        fill="#1f36c7"
+        mask="url(#unilever-mask)"
+      />
     </svg>
-    <span className="font-display italic text-base text-[#5a72d8]">Unilever</span>
+    <span className="font-sans italic font-semibold text-base text-[#1f36c7] tracking-tight">Unilever</span>
   </div>
 );
 
@@ -69,9 +128,9 @@ const certs = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="relative px-6 md:px-12 py-32 md:py-48 overflow-hidden">
+    <section id="certifications" className="relative px-6 md:px-12 py-24 md:py-32 overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-12 gap-4 md:gap-8 mb-20">
+        <div className="grid grid-cols-12 gap-4 md:gap-8 mb-14 md:mb-16">
           <Reveal className="col-span-12 md:col-span-3">
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-muted mb-3">
               — 04 / Credentials

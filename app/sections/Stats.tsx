@@ -39,7 +39,7 @@ function Counter({ target }: { target: number }) {
 
 export default function Stats() {
   return (
-    <section className="relative px-6 md:px-12 py-32 border-y border-bone/[0.08] overflow-hidden">
+    <section className="relative px-6 md:px-12 py-20 md:py-24 border-y border-bone/[0.08] overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((s) => (

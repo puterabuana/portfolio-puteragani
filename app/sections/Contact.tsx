@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative px-6 md:px-12 py-32 md:py-48 overflow-hidden border-t border-bone/[0.08]"
+      className="relative px-6 md:px-12 py-24 md:py-32 overflow-hidden border-t border-bone/[0.08]"
     >
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03]">
         <div className="font-display italic text-[28vw] md:text-[20vw] leading-none tracking-tighter text-bone whitespace-nowrap">
