@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     'Putera Buana Gani',
   ],
   authors: [{ name: 'Putera Buana Gani' }],
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Putera Buana Gani — Digital Marketing Specialist & Designer',
     description: 'Building brands that actually perform.',

@@ -79,7 +79,6 @@ export default function Hero() {
               <div>Indonesia → Worldwide</div>
             </div>
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-muted text-right">
-              <div className="text-silver mb-1">Issue 01</div>
               <div>Independent Studio</div>
             </div>
           </motion.div>
@@ -205,7 +204,6 @@ export default function Hero() {
             <div>Indonesia → Worldwide</div>
           </div>
           <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-muted text-right">
-            <div className="text-silver">Issue 01</div>
           </div>
         </motion.div>
 
