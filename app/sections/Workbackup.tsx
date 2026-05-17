@@ -34,7 +34,7 @@ export default function Work() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-12 gap-16 md:gap-8">
+        <div className="grid grid-cols-12 gap-6 md:gap-8">
           {projects.map((p, i) => (
             <Reveal
               key={p.id}
