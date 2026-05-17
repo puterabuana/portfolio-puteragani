@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
 
 const stats = [
-  { value: 43, label: 'Projects Completed' },
+  { value: 40, label: 'Projects Completed' },
   { value: 98, label: 'Client Satisfaction %' },
   { value: 100, label: 'Response Rate %' },
-  { value: 127, label: 'Design Concepts' },
+  { value: 120, label: 'Design Concepts' },
 ];
 
 function Counter({ target }: { target: number }) {
