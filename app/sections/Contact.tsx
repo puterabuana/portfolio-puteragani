@@ -91,7 +91,7 @@ export default function Contact() {
                 label: 'Reading',
                 title: 'Personal Blog',
                 handle: 'puteragani.com',
-                href: '#',
+                href: 'https://puteragani.com',
               },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 0.08}>

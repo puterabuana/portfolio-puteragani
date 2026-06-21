@@ -1,12 +1,12 @@
 'use client';
 
 const items = [
+  'Web Development',
   'Digital Marketing',
-  'Brand Identity',
+  'Content Writing',
   'Data Analytics',
-  'Visual Design',
   'Landing Pages',
-  'Social Media',
+  'SEO',
 ];
 
 export default function Marquee() {

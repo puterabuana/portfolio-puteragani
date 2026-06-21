@@ -43,7 +43,12 @@ export default function Footer() {
               >
                 Instagram
               </a>
-              <a href="#" className="link-underline text-silver hover:text-bone transition-colors">
+              <a
+                href="https://puteragani.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline text-silver hover:text-bone transition-colors"
+              >
                 Blog
               </a>
             </div>

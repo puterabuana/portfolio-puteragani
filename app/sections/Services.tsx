@@ -5,33 +5,33 @@ import Reveal from '../components/Reveal';
 const services = [
   {
     n: '01',
+    title: 'Web Development',
+    desc: 'AI-accelerated website builds across modern stacks — WordPress, custom HTML/CSS/JS, React, and beyond. Clean, fast, fully responsive, with quicker turnaround.',
+    tags: ['HTML/CSS/JS', 'WordPress', 'AI-Assisted'],
+  },
+  {
+    n: '02',
     title: 'Digital Marketing',
     desc: 'End-to-end campaign strategy, audience targeting, paid social, and performance tracking. From planning to optimization.',
     tags: ['Meta Ads', 'SEO', 'Funnels'],
   },
   {
-    n: '02',
-    title: 'Graphic Design',
-    desc: 'Visual identity, marketing collateral, posters, ads — sharp, modern design that earns attention and trust.',
-    tags: ['Figma', 'PS', 'Canva'],
+    n: '03',
+    title: 'Content & Article Writing',
+    desc: 'Clear, well-researched articles and blog content that rank and read well. SEO-aware writing with an AI-assisted workflow for speed.',
+    tags: ['Articles', 'Blog', 'SEO Copy'],
   },
   {
-    n: '03',
+    n: '04',
     title: 'Data Entry & Analysis',
     desc: 'Structured, reliable, and quietly meticulous. Excel, Sheets, dashboards, and clean datasets you can actually use.',
     tags: ['Excel', 'Sheets', 'GA4'],
   },
   {
-    n: '04',
-    title: 'Landing Page Design',
-    desc: 'Conversion-focused pages built around a single message and a single action. Clean, fast, and persuasive.',
-    tags: ['Figma', 'UX', 'CRO'],
-  },
-  {
     n: '05',
-    title: 'Social Media Design',
-    desc: 'Feed systems, ad creatives, and content templates that look like they belong to a brand — not a side project.',
-    tags: ['IG', 'TikTok', 'Reels'],
+    title: 'Landing Pages & CRO',
+    desc: 'Conversion-focused pages built around a single message and a single action. Clean, fast, and persuasive — on whatever stack fits the brief.',
+    tags: ['Any Stack', 'UX', 'CRO'],
   },
 ];
 

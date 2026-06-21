@@ -31,7 +31,7 @@ export default function About() {
           <Reveal className="col-span-12 md:col-span-5 md:col-start-4 space-y-6 text-silver leading-relaxed">
             <p>
               I work at the intersection of{' '}
-              <span className="text-bone">digital marketing, visual design, and data</span>. After
+              <span className="text-bone">web development, digital marketing, and content</span>. After
               completing certifications from Google, Microsoft, and Unilever, I now help startups,
               small businesses, and personal brands across the globe build presence that converts.
             </p>
@@ -52,7 +52,7 @@ export default function About() {
                 Focus Areas
               </div>
               <ul className="space-y-2 text-bone text-sm">
-                {['Digital Marketing', 'Graphic Design', 'Data Entry & Analysis', 'Brand Strategy', 'Visual Communication'].map(
+                {['Web Development', 'Digital Marketing', 'Content & Article Writing', 'Data Entry & Analysis', 'Brand Strategy'].map(
                   (f) => (
                     <li key={f} className="flex items-center gap-2">
                       <span className="w-1 h-1 bg-bone rounded-full" />
@@ -67,7 +67,7 @@ export default function About() {
                 Toolkit
               </div>
               <div className="flex flex-wrap gap-1.5">
-                {['Figma', 'Photoshop', 'GA4', 'Meta Ads', 'Notion', 'Excel', 'Canva'].map((t) => (
+                {['HTML/CSS/JS', 'WordPress', 'GA4', 'Meta Ads', 'Notion', 'Excel', 'Claude', 'ChatGPT'].map((t) => (
                   <span
                     key={t}
                     className="text-[11px] font-mono px-2.5 py-1 rounded-full border border-bone/15 text-silver"
