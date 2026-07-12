@@ -2,85 +2,118 @@ export interface Project {
   id: string;
   title: string;
   category: string;
-  label: 'Concept Project' | 'Personal Exploration' | 'Case Study';
+  /** Short badge — the sector, so the grid reads like an industry-organised roster. */
+  label: string;
+  /**
+   * Controls badge colour + honest provenance (disclosed plainly in the section intro):
+   * - client: real, paying/real-world client (highlighted)
+   * - owned: my own live property
+   * - neutral: self-initiated build for a real-world brief (real domain, live, audited)
+   */
+  accent: 'client' | 'owned' | 'neutral';
   description: string;
-  result: string;
-  resultNote: string;
+  /** Headline result — always an independently auditable score, tool named. */
+  metric: string;
+  metricNote: string;
   span: 'wide' | 'narrow';
   image: string;
+  /** Live site — anyone can visit and re-audit. */
+  siteUrl: string;
+  /** Full case study with evidence + limitations. */
+  caseStudyUrl: string;
 }
+
+const CASE_STUDY_BASE = 'https://seo.puteragani.com';
 
 export const projects: Project[] = [
   {
-    id: 'cafe-noir',
-    title: 'Café Noir — Website Redesign',
-    category: 'Web Development · UX',
-    label: 'Concept Project',
+    id: 'emberslice',
+    title: 'Ember Slice — Coal-Fired Pizza',
+    category: 'Restaurant Site · Local SEO',
+    label: 'Restaurant',
+    accent: 'neutral',
     description:
-      'A warm, cinematic redesign for an independent specialty coffee shop, built with an AI-accelerated workflow — storytelling, ambience, and a seamless reservation experience.',
-    result: 'Full Website Redesign',
-    resultNote: 'Responsive · Reservation UX',
+      'A coal-fired pizza restaurant site I built end-to-end, then optimised — metadata, schema, and audit coverage that lifted it into the high-90s.',
+    metric: 'Rank Math 90 → 97',
+    metricNote: 'Seobility 88 → 92% · 8 pages',
     span: 'wide',
-    image: '/images/projects/cafe-noir.png',
+    image: '/images/projects/emberslice-showcase.webp',
+    siteUrl: 'https://emberslice.com/',
+    caseStudyUrl: `${CASE_STUDY_BASE}/case-study/emberslice/`,
   },
   {
-    id: 'cognition',
-    title: 'Cognition — AI SaaS Landing',
-    category: 'Landing Page · Web Dev',
-    label: 'Case Study',
+    id: 'fernwood',
+    title: 'Fernwood Dental Care',
+    category: 'Dental Clinic · Local SEO',
+    label: 'Dental Clinic',
+    accent: 'neutral',
     description:
-      'A conversion-focused landing page for an AI infrastructure SaaS, built to drive sign-ups and communicate enterprise-grade value with clarity.',
-    result: 'Conversion Landing Page',
-    resultNote: 'Hero · Pricing · CTA System',
+      'A family dental clinic site built and localised for South Austin — keyword localisation, schema markup, sitemap, and an llms.txt for AI search.',
+    metric: 'Rank Math 94 → 97',
+    metricNote: 'Seobility 83 → 90% · 18 pages',
     span: 'narrow',
-    image: '/images/projects/cognition.png',
+    image: '/images/projects/fernwood-showcase.webp',
+    siteUrl: 'https://fernwooddentalcare.com/',
+    caseStudyUrl: `${CASE_STUDY_BASE}/case-study/fernwood/`,
   },
   {
-    id: 'aurent',
-    title: 'Aurént — Modern Minimalism',
-    category: 'Social Campaign · Branding',
-    label: 'Personal Exploration',
+    id: 'meridianroasters',
+    title: 'Meridian Roasters — Coffee E-commerce',
+    category: 'E-commerce · Technical SEO',
+    label: 'E-commerce',
+    accent: 'neutral',
     description:
-      'A minimalist social campaign for AURÉNT — elevating brand presence with a cohesive, timeless visual identity across Instagram.',
-    result: 'Social Visual Identity',
-    resultNote: 'Feed System · Templates · Tone',
-    span: 'narrow',
-    image: '/images/projects/aurent.png',
-  },
-  {
-    id: 'nexis',
-    title: 'Nexis — Brand Identity System',
-    category: 'Logo · Brand Guidelines',
-    label: 'Concept Project',
-    description:
-      'Full brand identity for Nexis — a modern, geometric mark built around the essence of "Connect. Build. Grow.", with complete usage guidelines.',
-    result: 'Full Brand System',
-    resultNote: 'Logo · Palette · Type · Applications',
+      'A 14-page specialty-coffee storefront, taken from a thin baseline to a deep, structured, fast build in a single day — content depth, schema, and performance.',
+    metric: 'Seobility 57 → 88%',
+    metricNote: 'RankNow 86.8 → 94.8 · 14 pages',
     span: 'wide',
-    image: '/images/projects/nexis.png',
+    image: '/images/projects/meridianroasters-showcase.webp',
+    siteUrl: 'https://meridianroasters.com/',
+    caseStudyUrl: `${CASE_STUDY_BASE}/case-study/meridianroasters/`,
   },
   {
-    id: 'pulse',
-    title: 'Pulse — From Raw Data to Insights',
-    category: 'Dashboard · Data Visualization',
-    label: 'Concept Project',
+    id: 'kerlyfinance',
+    title: 'Kerly Finance — Market Intelligence',
+    category: 'Finance Publishing · SEO + GEO',
+    label: 'Finance',
+    accent: 'neutral',
     description:
-      'An analytics dashboard concept turning messy raw data into clean, actionable insights — built around clarity, hierarchy, and forecasting.',
-    result: '4-Step Data Pipeline',
-    resultNote: 'Raw → Processed → Structured → Insights',
-    span: 'wide',
-    image: '/images/projects/pulse.png',
-  },
-  {
-    id: 'verde-market',
-    title: 'Verde Market — Local Launch',
-    category: 'Digital Marketing · Campaign',
-    label: 'Concept Project',
-    description:
-      'A two-week multi-channel digital marketing sprint for a local organic grocery brand. Built around measurable performance and community growth.',
-    result: 'Multi-Channel Campaign Plan',
-    resultNote: 'Strategy · Creatives · Targeting',
+      'A financial-intelligence publishing site built for depth — richer content, cleaner link context, and stronger mobile performance across the crawl.',
+    metric: 'Seobility 80 → 88%',
+    metricNote: 'SEO Site Checkup 85 → 90 · AI Search 99%',
     span: 'narrow',
-    image: '/images/projects/verde-market.png',
+    image: '/images/projects/kerlyfinance-showcase.webp',
+    siteUrl: 'https://kerlyfinance.com/',
+    caseStudyUrl: `${CASE_STUDY_BASE}/case-study/kerlyfinance/`,
+  },
+  {
+    id: 'puteragani',
+    title: 'PuteraGani.com — Editorial Platform',
+    category: 'Owned Site · Technical SEO',
+    label: 'Owned Project',
+    accent: 'owned',
+    description:
+      'My own editorial platform — a repeatable technical-SEO system across 109 production pages: canonical URLs, structured data, crawl controls, and validation.',
+    metric: 'Rank Math 95 / 100',
+    metricNote: '109 pages · PageSpeed 98 · Semrush 92%',
+    span: 'wide',
+    image: '/images/projects/puteragani-showcase.webp',
+    siteUrl: 'https://puteragani.com/',
+    caseStudyUrl: `${CASE_STUDY_BASE}/case-study/puteragani/`,
+  },
+  {
+    id: 'wena',
+    title: 'Wena Self Photo Studio',
+    category: 'Local Business · SEO',
+    label: 'Client Project',
+    accent: 'client',
+    description:
+      'A real client build for a local self-photo studio — local-intent SEO, search preview, social cards, image alt text, and clean crawlability.',
+    metric: 'Rank Math 88 · Seobility 90%',
+    metricNote: 'SEOptimer B+ · PageSpeed 99',
+    span: 'narrow',
+    image: '/images/projects/wena-showcase.webp',
+    siteUrl: 'https://wena.my.id/',
+    caseStudyUrl: `${CASE_STUDY_BASE}/case-study/wena/`,
   },
 ];
