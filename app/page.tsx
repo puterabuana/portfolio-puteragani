@@ -9,6 +9,7 @@ import Marquee from './sections/Marquee';
 import About from './sections/About';
 import Services from './sections/Services';
 import Work from './sections/Work';
+import Creative from './sections/Creative';
 import Stats from './sections/Stats';
 import Certifications from './sections/Certifications';
 import WhyMe from './sections/WhyMe';
@@ -29,6 +30,7 @@ export default function Home() {
         <About />
         <Services />
         <Work />
+        <Creative />
         <Stats />
         <Certifications />
         <WhyMe />
