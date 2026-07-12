@@ -6,32 +6,32 @@ const services = [
   {
     n: '01',
     title: 'Web Development',
-    desc: 'AI-accelerated website builds across modern stacks — WordPress, custom HTML/CSS/JS, React, and beyond. Clean, fast, fully responsive, with quicker turnaround.',
-    tags: ['HTML/CSS/JS', 'WordPress', 'AI-Assisted'],
+    desc: 'AI-accelerated website builds across modern stacks — Next.js, custom HTML/CSS/JS, WordPress. Clean, fast, fully responsive, built to be found.',
+    tags: ['Next.js', 'HTML/CSS/JS', 'WordPress'],
   },
   {
     n: '02',
-    title: 'Digital Marketing',
-    desc: 'End-to-end campaign strategy, audience targeting, paid social, and performance tracking. From planning to optimization.',
-    tags: ['Meta Ads', 'SEO', 'Funnels'],
+    title: 'SEO & Technical Optimization',
+    desc: 'On-page, technical, and local SEO — schema, crawl controls, Core Web Vitals, and GEO for AI search. Results independently audited, scores you can re-run yourself.',
+    tags: ['Technical', 'Local', 'Schema'],
   },
   {
     n: '03',
     title: 'Content & Article Writing',
-    desc: 'Clear, well-researched articles and blog content that rank and read well. SEO-aware writing with an AI-assisted workflow for speed.',
+    desc: 'Clear, well-researched articles and blog content that rank and read well. SEO-aware writing — and designed page layouts — with an AI-assisted workflow for speed.',
     tags: ['Articles', 'Blog', 'SEO Copy'],
   },
   {
     n: '04',
-    title: 'Data Entry & Analysis',
-    desc: 'Structured, reliable, and quietly meticulous. Excel, Sheets, dashboards, and clean datasets you can actually use.',
-    tags: ['Excel', 'Sheets', 'GA4'],
+    title: 'Product Imagery & Design',
+    desc: 'AI-generated product and lifestyle imagery, brochures, and print-ready layouts — batch-produced at scale and delivered ready to publish.',
+    tags: ['Imagery', 'Brochure', 'Print'],
   },
   {
     n: '05',
-    title: 'Landing Pages & CRO',
-    desc: 'Conversion-focused pages built around a single message and a single action. Clean, fast, and persuasive — on whatever stack fits the brief.',
-    tags: ['Any Stack', 'UX', 'CRO'],
+    title: 'Digital Marketing',
+    desc: 'End-to-end campaign strategy, audience targeting, paid social, and performance tracking. From planning to optimization.',
+    tags: ['Meta Ads', 'Funnels', 'GA4'],
   },
 ];
 
@@ -73,7 +73,7 @@ export default function Services() {
                   / {s.n}
                 </div>
                 <div className="col-span-10 md:col-span-4">
-                  <h3 className="font-display text-3xl md:text-5xl text-bone group-hover:translate-x-2 transition-transform duration-500">
+                  <h3 className="font-display text-3xl lg:text-5xl text-bone group-hover:translate-x-2 transition-transform duration-500 break-words">
                     {s.title}
                   </h3>
                 </div>

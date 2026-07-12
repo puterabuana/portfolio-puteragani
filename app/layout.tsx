@@ -21,14 +21,15 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Putera Buana Gani — Digital Marketing Specialist & Designer',
+  title: 'Putera Buana Gani — Web Developer & SEO Consultant',
   description:
-    'Premium freelance Digital Marketing Specialist, Graphic Designer, and Data Entry Professional. Building brands that perform.',
+    'Freelance web developer & SEO consultant. I build websites and make them rank — with an AI-augmented workflow that also covers content, product imagery, and design.',
   keywords: [
-    'freelance digital marketing',
-    'graphic designer',
-    'landing page designer',
-    'data entry specialist',
+    'freelance web developer',
+    'SEO consultant',
+    'technical SEO',
+    'AI-assisted web development',
+    'content writing',
     'Putera Buana Gani',
   ],
   authors: [{ name: 'Putera Buana Gani' }],
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Putera Buana Gani — Digital Marketing Specialist & Designer',
-    description: 'Building brands that actually perform.',
+    title: 'Putera Buana Gani — Web Developer & SEO Consultant',
+    description: 'I build websites and make them rank. AI-augmented, end-to-end.',
     type: 'website',
   },
 };

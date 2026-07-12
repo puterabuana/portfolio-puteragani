@@ -2,11 +2,11 @@
 
 const items = [
   'Web Development',
-  'Digital Marketing',
-  'Content Writing',
-  'Data Analytics',
-  'Landing Pages',
   'SEO',
+  'Content Writing',
+  'Product Imagery',
+  'Brochure Design',
+  'Digital Marketing',
 ];
 
 export default function Marquee() {

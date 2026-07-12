@@ -31,9 +31,10 @@ export default function About() {
           <Reveal className="col-span-12 md:col-span-5 md:col-start-4 space-y-6 text-silver leading-relaxed">
             <p>
               I work at the intersection of{' '}
-              <span className="text-bone">web development, digital marketing, and content</span>. After
-              completing certifications from Google, Microsoft, and Unilever, I now help startups,
-              small businesses, and personal brands across the globe build presence that converts.
+              <span className="text-bone">web development and SEO</span> — I build the site, then
+              make it rank. After completing certifications from Google, Microsoft, and Unilever, I
+              now help startups, small businesses, and personal brands across the globe build a
+              presence that ranks and converts.
             </p>
             <p>
               My approach is simple: understand the audience, design with intent, measure
@@ -52,7 +53,7 @@ export default function About() {
                 Focus Areas
               </div>
               <ul className="space-y-2 text-bone text-sm">
-                {['Web Development', 'Digital Marketing', 'Content & Article Writing', 'Data Entry & Analysis', 'Brand Strategy'].map(
+                {['Web Development', 'Technical & Local SEO', 'Content & Article Writing', 'Product Imagery & Design', 'Digital Marketing'].map(
                   (f) => (
                     <li key={f} className="flex items-center gap-2">
                       <span className="w-1 h-1 bg-bone rounded-full" />
@@ -67,7 +68,7 @@ export default function About() {
                 Toolkit
               </div>
               <div className="flex flex-wrap gap-1.5">
-                {['HTML/CSS/JS', 'WordPress', 'GA4', 'Meta Ads', 'Notion', 'Excel', 'Claude', 'ChatGPT'].map((t) => (
+                {['HTML/CSS/JS', 'Next.js', 'WordPress', 'Rank Math', 'Schema', 'GA4', 'Claude', 'ChatGPT'].map((t) => (
                   <span
                     key={t}
                     className="text-[11px] font-mono px-2.5 py-1 rounded-full border border-bone/15 text-silver"

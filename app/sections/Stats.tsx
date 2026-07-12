@@ -5,7 +5,7 @@ import { useInView } from 'framer-motion';
 
 const stats = [
   { value: 5.0, label: 'Client Rating ★', decimals: 1, pad: false, prefix: '' },
-  { value: 100, label: 'On-Time Delivery %', decimals: 0, pad: false, prefix: '' },
+  { value: 6, label: 'Sites Built & Ranked', decimals: 0, pad: true, prefix: '' },
   { value: 4, label: 'Certifications', decimals: 0, pad: true, prefix: '' },
   { value: 2, label: 'Response · Hours', decimals: 0, pad: false, prefix: '<' },
 ];

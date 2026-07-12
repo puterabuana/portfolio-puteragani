@@ -2,7 +2,28 @@
 
 import Reveal from '../components/Reveal';
 
-const testimonials = [
+interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+  initial: string;
+  /** null = no formal star review yet; show as verified message instead of inventing stars. */
+  rating: number | null;
+  platform: string;
+  tag?: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    quote:
+      'Thank you sir. I definitely have more work for you.',
+    name: 'Edgar E.',
+    role: 'Shopify Content & Management · 🇺🇸 United States',
+    initial: 'E',
+    rating: 5.0,
+    platform: 'Verified · Freelancer.com',
+    tag: 'Repeat client',
+  },
   {
     quote:
       'Absolutely fantastic, super high quality. Very high quality work.',
@@ -11,6 +32,15 @@ const testimonials = [
     initial: 'F',
     rating: 5.0,
     platform: 'Verified · Freelancer.com',
+  },
+  {
+    quote:
+      'Thank you for revising the brochure. I am happy at the layout now.',
+    name: 'Boon Seng L.',
+    role: 'Product Brochure · 🇸🇬 Singapore',
+    initial: 'B',
+    rating: null,
+    platform: 'Client feedback · Freelancer.com',
   },
 ];
 
@@ -21,7 +51,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-12 gap-4 md:gap-8 mb-14 md:mb-16">
           <Reveal className="col-span-12 md:col-span-3">
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-muted mb-3">
-              — 06 / Voices
+              — 07 / Voices
             </div>
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-silver">
               What Clients
@@ -32,32 +62,46 @@ export default function Testimonials() {
           <Reveal className="col-span-12 md:col-span-9" delay={0.1}>
             <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-[-0.02em] text-bone">
               Honest words from{' '}
-              <span className="italic font-light text-silver">people I've worked with.</span>
+              <span className="italic font-light text-silver">real, paying clients.</span>
             </h2>
             <p className="mt-6 text-muted text-sm font-mono max-w-xl">
-              Just getting started — every review here is real and verifiable. Quality over quantity,
-              from day one.
+              Every review here is real and verifiable — one of them already came back for more work.
+              Quality over quantity, from day one.
             </p>
           </Reveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((t, i) => (
-            <Reveal key={i} delay={i * 0.1} className="glass rounded-sm p-8 md:p-10 flex flex-col">
+            <Reveal key={i} delay={(i % 2) * 0.1} className="glass rounded-sm p-8 md:p-10 flex flex-col">
               <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-1.5">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <svg key={s} width="16" height="16" viewBox="0 0 24 24" fill="#f5f3ee">
-                      <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.8 5.8 21l1.6-7L2 9.2l7.1-.6L12 2z" />
+                {t.rating !== null ? (
+                  <div className="flex items-center gap-1.5">
+                    {Array.from({ length: 5 }).map((_, s) => (
+                      <svg key={s} width="16" height="16" viewBox="0 0 24 24" fill="#f5f3ee">
+                        <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.8 5.8 21l1.6-7L2 9.2l7.1-.6L12 2z" />
+                      </svg>
+                    ))}
+                    <span className="ml-2 font-mono text-xs text-bone">{t.rating.toFixed(1)}</span>
+                  </div>
+                ) : (
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-silver flex items-center gap-2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M20 6L9 17l-5-5" />
                     </svg>
-                  ))}
-                  <span className="ml-2 font-mono text-xs text-bone">{t.rating.toFixed(1)}</span>
-                </div>
+                    Verified message
+                  </span>
+                )}
                 <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-emerald-400/80 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                   {t.platform}
                 </span>
               </div>
+              {t.tag && (
+                <span className="self-start mb-4 text-[9px] font-mono tracking-[0.2em] uppercase px-2.5 py-1 rounded-full bg-emerald-400/15 text-emerald-300">
+                  ↺ {t.tag}
+                </span>
+              )}
               <p className="font-display text-xl md:text-2xl text-bone leading-relaxed mb-8 flex-1">
                 “{t.quote}”
               </p>

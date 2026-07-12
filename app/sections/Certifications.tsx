@@ -133,7 +133,7 @@ export default function Certifications() {
         <div className="grid grid-cols-12 gap-4 md:gap-8 mb-14 md:mb-16">
           <Reveal className="col-span-12 md:col-span-3">
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-muted mb-3">
-              — 04 / Credentials
+              — 05 / Credentials
             </div>
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-silver">
               Certified by

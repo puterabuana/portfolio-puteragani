@@ -43,7 +43,6 @@ export default function Hero() {
               alt="Putera Buana Gani"
               fill
               className="object-cover"
-              style={{ filter: 'grayscale(0.85) contrast(1.05) brightness(0.9) sepia(0.08)' }}
               priority
             />
           </motion.div>
@@ -126,9 +125,9 @@ export default function Hero() {
                 className="col-span-5"
               >
                 <p className="text-base lg:text-lg text-silver leading-relaxed font-light max-w-md">
-                  I'm <span className="text-bone">Putera Buana Gani</span> — a freelance digital
-                  marketer, web developer, and content writer helping ambitious teams turn ideas
-                  into results-driven brands.
+                  I'm <span className="text-bone">Putera Buana Gani</span> — a freelance web
+                  developer &amp; SEO consultant. I build sites and make them rank, with an
+                  AI-augmented workflow that also covers content, imagery, and design.
                 </p>
               </motion.div>
               <motion.div
@@ -168,7 +167,7 @@ export default function Hero() {
               className="mt-12 pt-8 border-t border-bone/[0.08] grid grid-cols-4 gap-6"
             >
               {[
-                { label: 'Specialties', value: 'Web · Marketing · Content' },
+                { label: 'Focus', value: 'Web Dev · SEO · Content' },
                 { label: 'Status', value: 'Open to projects', live: true },
                 { label: 'Based in', value: 'Indonesia · Worldwide' },
                 { label: 'Response', value: 'Within 1–2 hours' },
@@ -219,7 +218,6 @@ export default function Hero() {
             alt="Putera Buana Gani"
             fill
             className="object-cover object-center"
-            style={{ filter: 'grayscale(0.85) contrast(1.05) brightness(0.85) sepia(0.08)' }}
             priority
           />
           {/* Heavy gradient to blend into ink */}
@@ -300,9 +298,9 @@ export default function Hero() {
             transition={{ duration: 1, delay: 2.3 }}
             className="mt-8 text-silver text-[15px] leading-relaxed font-light"
           >
-            I'm <span className="text-bone">Putera Buana Gani</span> — a freelance digital marketer,
-            web developer, and content writer helping ambitious teams turn ideas into results-driven
-            brands.
+            I'm <span className="text-bone">Putera Buana Gani</span> — a freelance web developer
+            &amp; SEO consultant. I build sites and make them rank, with an AI-augmented workflow
+            that also covers content, imagery, and design.
           </motion.p>
 
           {/* CTAs */}
@@ -340,7 +338,7 @@ export default function Hero() {
             className="mt-12 pt-8 pb-12 border-t border-bone/[0.08] grid grid-cols-2 gap-6"
           >
             {[
-              { label: 'Specialties', value: 'Web · Marketing · Content' },
+              { label: 'Focus', value: 'Web Dev · SEO · Content' },
               { label: 'Status', value: 'Open to projects', live: true },
               { label: 'Based in', value: 'Indonesia · Worldwide' },
               { label: 'Response', value: 'Within 1–2 hours' },

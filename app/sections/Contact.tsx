@@ -66,8 +66,8 @@ export default function Contact() {
                   <path d="M7 17L17 7M17 7H7M17 7v10" />
                 </svg>
               </div>
-              <div className="font-display text-2xl md:text-3xl text-bone mb-2 break-all">
-                ganiputerabuana@gmail.com
+              <div className="font-display text-xl md:text-2xl lg:text-3xl text-bone mb-2 break-words">
+                ganiputerabuana@<wbr />gmail.com
               </div>
               <div className="text-muted text-sm">Best for project inquiries & quotes</div>
             </a>
