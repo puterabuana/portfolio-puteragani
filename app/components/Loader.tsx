@@ -2,12 +2,22 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { introSeen, markIntroSeen } from '../lib/intro';
 
 export default function Loader() {
   const [show, setShow] = useState(true);
+  const [skipped, setSkipped] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(false), 1400);
+    if (introSeen()) {
+      setSkipped(true);
+      setShow(false);
+      return;
+    }
+    const timer = setTimeout(() => {
+      markIntroSeen();
+      setShow(false);
+    }, 1400);
     return () => clearTimeout(timer);
   }, []);
 
@@ -17,8 +27,9 @@ export default function Loader() {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: skipped ? 0.2 : 0.8 }}
           className="fixed inset-0 z-[10000] bg-ink flex items-center justify-center"
+          aria-hidden="true"
         >
           <div className="flex flex-col items-center gap-6">
             <div className="font-display text-2xl tracking-tight italic text-bone">

@@ -19,6 +19,7 @@ const config: Config = {
         bone: '#f5f3ee',
         silver: '#c8c8c8',
         muted: '#7a7a7a',
+        ember: '#e3b78c',
       },
     },
   },

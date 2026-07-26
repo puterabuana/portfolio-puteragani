@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="grid grid-cols-12 gap-4 md:gap-8 mb-16">
           <Reveal className="col-span-12 md:col-span-3">
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-muted mb-3">
-              — 07 / Contact
+              — 08 / Contact
             </div>
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-silver">
               Let's Make
@@ -30,7 +30,7 @@ export default function Contact() {
             <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.02] tracking-[-0.03em] text-bone">
               Have a project
               <br />
-              in mind? <span className="italic font-light text-silver">Let's talk.</span>
+              in mind? <span className="italic font-light text-ember">Let's talk.</span>
             </h2>
             <p className="mt-8 text-silver text-base md:text-lg max-w-xl leading-relaxed">
               Whether it's a brand refresh, a landing page that needs to convert, or a campaign you

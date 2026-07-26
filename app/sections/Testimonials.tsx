@@ -137,7 +137,7 @@ export default function Testimonials() {
             </div>
             <a
               href="#contact"
-              className="inline-flex items-center gap-3 text-[11px] font-mono tracking-[0.2em] uppercase text-bone group-hover:gap-4 transition-all"
+              className="inline-flex items-center gap-3 text-[11px] font-mono tracking-[0.2em] uppercase text-ember group-hover:gap-4 transition-all"
             >
               Become a client
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

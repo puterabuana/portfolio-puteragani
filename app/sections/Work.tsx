@@ -121,7 +121,7 @@ export default function Work() {
                       href={p.caseStudyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="link-underline text-silver hover:text-bone transition-colors"
+                      className="link-underline text-ember hover:text-bone transition-colors"
                     >
                       See the proof →
                     </a>

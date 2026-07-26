@@ -7,6 +7,7 @@
   --color-bone: #f5f3ee;
   --color-silver: #c8c8c8;
   --color-muted: #7a7a7a;
+  --color-ember: #e3b78c;
 }
 
 * {
@@ -30,8 +31,14 @@ body {
 }
 
 ::selection {
-  background: var(--color-bone);
+  background: var(--color-ember);
   color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 1.5px solid var(--color-ember);
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -82,7 +89,28 @@ body {
   transform-origin: left;
 }
 
-@keyframes scrollLine {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(300%); }
+/* Custom cursor states */
+.cursor-ring,
+.cursor-dot {
+  transform: translate(-50%, -50%);
+}
+body.cursor-hover .cursor-ring {
+  transform: translate(-50%, -50%) scale(1.45);
+  border-color: rgba(227, 183, 140, 0.9);
+}
+body.cursor-hover .cursor-dot {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

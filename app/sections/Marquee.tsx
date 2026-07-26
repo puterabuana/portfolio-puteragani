@@ -22,17 +22,21 @@ export default function Marquee() {
         }}
       >
         <div className="flex animate-marquee whitespace-nowrap" style={{ animation: 'marquee 40s linear infinite' }}>
-          {[...items, ...items].map((item, i) => (
-            <span key={i} className="flex items-center gap-12 pr-12">
-              <span
-                className={`font-display italic text-2xl md:text-4xl ${
-                  i % 2 === 0 ? 'text-bone/50' : 'text-silver/40'
-                }`}
-              >
-                {item}
-              </span>
-              <span className="text-bone/20">✦</span>
-            </span>
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex" aria-hidden={copy === 1 || undefined}>
+              {items.map((item, i) => (
+                <span key={i} className="flex items-center gap-12 pr-12">
+                  <span
+                    className={`font-display italic text-2xl md:text-4xl ${
+                      i % 2 === 0 ? 'text-bone/50' : 'text-silver/40'
+                    }`}
+                  >
+                    {item}
+                  </span>
+                  <span className="text-ember/30" aria-hidden="true">✦</span>
+                </span>
+              ))}
+            </div>
           ))}
         </div>
       </div>

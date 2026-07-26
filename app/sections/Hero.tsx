@@ -3,12 +3,13 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
+import { introDelay } from '../lib/intro';
 
 const wordReveal = {
   hidden: { y: '110%' },
   show: (i: number) => ({
     y: 0,
-    transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 1.6 + i * 0.12 },
+    transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: introDelay(1.6) + i * 0.12 },
   }),
 };
 
@@ -31,7 +32,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 2, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 2, delay: introDelay(1.4), ease: [0.16, 1, 0.3, 1] }}
           className="absolute top-0 right-0 w-[42%] lg:w-[40%] h-full overflow-hidden"
         >
           <motion.div
@@ -42,6 +43,7 @@ export default function Hero() {
               src="/images/profile.png"
               alt="Putera Buana Gani"
               fill
+              sizes="(max-width: 768px) 100vw, 42vw"
               className="object-cover"
               priority
             />
@@ -70,7 +72,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.6 }}
+            transition={{ duration: 1, delay: introDelay(1.6) }}
             className="flex justify-between items-start"
           >
             <div className="font-mono text-[11px] tracking-[0.25em] uppercase text-muted">
@@ -106,7 +108,7 @@ export default function Hero() {
                     initial="hidden"
                     animate="show"
                     variants={wordReveal}
-                    className="inline-block italic font-light text-silver"
+                    className={`inline-block italic font-light ${w === 'perform.' ? 'text-ember' : 'text-silver'}`}
                   >
                     {w}
                   </motion.span>
@@ -121,7 +123,7 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 2.3 }}
+                transition={{ duration: 1, delay: introDelay(2.3) }}
                 className="col-span-5"
               >
                 <p className="text-base lg:text-lg text-silver leading-relaxed font-light max-w-md">
@@ -133,13 +135,13 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 2.4 }}
+                transition={{ duration: 1, delay: introDelay(2.4) }}
                 className="col-span-7 flex flex-col items-start lg:items-end gap-6"
               >
                 <div className="flex flex-wrap gap-3">
                   <a
                     href="#work"
-                    className="inline-flex items-center gap-3 bg-bone text-ink px-7 py-4 rounded-full text-[12px] font-mono tracking-[0.2em] uppercase hover:bg-silver transition-colors group"
+                    className="inline-flex items-center gap-3 bg-bone text-ink px-7 py-4 rounded-full text-[12px] font-mono tracking-[0.2em] uppercase hover:bg-ember transition-colors group"
                   >
                     View Portfolio
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="group-hover:translate-x-1 transition-transform">
@@ -163,7 +165,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 2.6 }}
+              transition={{ duration: 1, delay: introDelay(2.6) }}
               className="mt-12 pt-8 border-t border-bone/[0.08] grid grid-cols-4 gap-6"
             >
               {[
@@ -195,14 +197,12 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.6 }}
+          transition={{ duration: 1, delay: introDelay(1.6) }}
           className="relative z-20 px-6 pt-28 pb-4 flex justify-between items-start"
         >
           <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-muted">
             <div className="text-silver mb-1">— Portfolio / 2026</div>
             <div>Indonesia → Worldwide</div>
-          </div>
-          <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-muted text-right">
           </div>
         </motion.div>
 
@@ -210,13 +210,14 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 2, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 2, delay: introDelay(1.4), ease: [0.16, 1, 0.3, 1] }}
           className="relative w-full h-[55vh] overflow-hidden"
         >
           <Image
             src="/images/profile.png"
             alt="Putera Buana Gani"
             fill
+            sizes="100vw"
             className="object-cover object-center"
             priority
           />
@@ -236,7 +237,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.4, delay: 2.4 }}
+            transition={{ duration: 1.4, delay: introDelay(2.4) }}
             className="absolute bottom-4 left-6 right-6 flex justify-between items-end"
           >
             <div className="font-mono text-[9px] tracking-[0.3em] uppercase text-bone/60">
@@ -285,7 +286,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="show"
                 variants={wordReveal}
-                className="inline-block italic font-light text-silver"
+                className="inline-block italic font-light text-ember"
               >
                 perform.
               </motion.span>
@@ -295,7 +296,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 2.3 }}
+            transition={{ duration: 1, delay: introDelay(2.3) }}
             className="mt-8 text-silver text-[15px] leading-relaxed font-light"
           >
             I'm <span className="text-bone">Putera Buana Gani</span> — a freelance web developer
@@ -307,7 +308,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 2.4 }}
+            transition={{ duration: 1, delay: introDelay(2.4) }}
             className="mt-8 flex flex-col gap-3"
           >
             <a
@@ -334,7 +335,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 2.6 }}
+            transition={{ duration: 1, delay: introDelay(2.6) }}
             className="mt-12 pt-8 pb-12 border-t border-bone/[0.08] grid grid-cols-2 gap-6"
           >
             {[

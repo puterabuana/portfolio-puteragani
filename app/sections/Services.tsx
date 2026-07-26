@@ -64,7 +64,7 @@ export default function Services() {
           {services.map((s, i) => (
             <div
               key={s.n}
-              className={`service-row group cursor-pointer border-t border-bone/[0.08] hover:bg-bone/[0.02] transition-colors duration-500 ${
+              className={`service-row group border-t border-bone/[0.08] hover:bg-bone/[0.02] transition-colors duration-500 ${
                 i === services.length - 1 ? 'border-b' : ''
               }`}
             >
